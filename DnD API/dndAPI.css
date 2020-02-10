@@ -1,3 +1,30 @@
-ul {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.lists {
+    display: flex;
+    flex-wrap: none;
+    justify-content: space-around;
+}
+
+#mainList {
+    background-color: thistle;
     list-style-type: none;
+
+    width: 45%;
+
+    padding: 15px;
+    margin: 15px;
+}
+
+#selectedList {
+    background-color: tomato;
+    list-style-type: none;
+
+    width: 45%;
+
+    padding: 15px;
+    margin: 15px;
 }
