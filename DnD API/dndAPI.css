@@ -1,4 +1,6 @@
 body {
+    background-color: beige;
+
     margin: 0;
     padding: 0;
 }
@@ -10,28 +12,39 @@ body {
 }
 
 .spellList {
-    background-color: thistle;
+    background-image: url(./assets/annie-spratt-xvU-X0GV9-o-unsplash.jpg);
+    border: thin solid darkgray;
+    border-radius: 5px;
+
+    overflow-y: scroll;
         
     width: 45%;
-    height: 400vh;
+    height: 90vh;
     
     margin: 15px;
 }
 
 #mainList {
     display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
     list-style-type: none;
     padding: 15px;
 }
 
 .mainLi {
     flex-flow: column wrap;
+    font-size: 10px;
+    margin: 0;
 }
 
 #spellCard {
     width: 45%; 
-    height: 100%;
+    height: 90vh;
 
+    overflow-y: scroll;
+    overflow-y: auto;
+    
     margin: 15px; 
 
     background-image: url(./assets/annie-spratt-xvU-X0GV9-o-unsplash.jpg);

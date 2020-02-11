@@ -23,6 +23,7 @@ function displaySpells(data) {
     results.forEach(item => {
         let spell = document.createElement('li');
         spell.classList.add('mainLi');
+        
         mainList.appendChild(spell);
 
         let infoButton = document.createElement('button');
