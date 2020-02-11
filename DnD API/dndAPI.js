@@ -3,6 +3,13 @@ let baseURL = 'http://www.dnd5eapi.co'
 let mainList = document.getElementById('mainList');
 let selectedList = document.getElementById('selectedList');
 
+let card = document.getElementById('spellCard');
+let cardTitle = document.getElementById('spellName');
+let schoolTitle = document.getElementById('schoolTitle');
+let charClasses = document.getElementById('charClassesTitle');
+let infoList = document.getElementById('infoList');
+let spellDesc = document.getElementById('spellDesc');
+
 function getSpells() {
     fetch(baseURL + '/api/spells')
     .then(response => response.json())
@@ -39,67 +46,66 @@ function getMoreInfo(url) {
 
 function displayMoreInfo(data) {
 
-    while (selectedList.firstChild) {
-        selectedList.removeChild(selectedList.firstChild);
+    while (spellDesc.firstChild) {
+        spellDesc.removeChild(spellDesc.firstChild);
     }
 
-    let spellHeading = document.createElement('h3');
-    spellHeading.innerText = data.name;
+    while (infoList.firstElementChild) {
+        infoList.removeChild(infoList.firstChild);
+    }
+
+    cardTitle.innerText = data.name;
     
-    let school = document.createElement('p');
-    school.innerText = 'School of ' + data.school.name;
+    schoolTitle.innerText = 'School of ' + data.school.name;
 
-    let classHeading = document.createElement('p');
-    classHeading.innerText = 'Classes:';
+    charClasses.innerText = 'Classes:';
 
-    let classes = document.createElement('p');
-    classHeading.appendChild(classes);
-
-    data.classes.forEach(i => {
-        let x = document.createElement('li');
-        x.innerText = i.name;
-        classes.appendChild(x);
-    })
-
-    let infoList = document.createElement('ul');
+    for (let i = 0; i < data.classes.length; i++) {
+        let x = data.classes[i]
+        if (i === 0) {
+            charClasses.innerText += (' ' + x.name);
+        } else {
+            charClasses.innerText += (', ' + x.name);
+        }
+    }          
 
     let spellLevel = document.createElement('li');
+    spellLevel.classList.add("list-group-item");
     spellLevel.innerText = 'Level: ' + data.level;
+    infoList.appendChild(spellLevel);
     
     let range = document.createElement('li');
+    range.classList.add("list-group-item");
     range.innerText = 'Range: ' + data.range;
-    
-    let castingTime = document.createElement('li');
-    castingTime.innerText = 'Casting Time: ' + data.casting_time;
-    
-    let duration = document.createElement('li');
-    duration.innerText = 'Duration: ' + data.duration;
-    
-    let pageNum = document.createElement('li');
-    pageNum.innerText = 'Page Number: ' + data.page;
-
-    selectedList.appendChild(spellHeading);
-    selectedList.appendChild(school);
-    selectedList.appendChild(classHeading);
-    selectedList.appendChild(infoList);
-    infoList.appendChild(spellLevel);
     infoList.appendChild(range);
+
+    let castingTime = document.createElement('li');
+    castingTime.classList.add("list-group-item");
+    castingTime.innerText = 'Casting Time: ' + data.casting_time;
     infoList.appendChild(castingTime);
+
+    let duration = document.createElement('li');
+    duration.classList.add("list-group-item");
+    duration.innerText = 'Duration: ' + data.duration;
     infoList.appendChild(duration);
+
+    let pageNum = document.createElement('li');
+    pageNum.classList.add("list-group-item");
+    pageNum.innerText = 'Page Number: ' + data.page;
     infoList.appendChild(pageNum);
     
     let description = data.desc;
     description.forEach(line => {
         let para = document.createElement('p');
         para.innerText = line;
-        selectedList.appendChild(para);
+        spellDesc.appendChild(para);
     })    
 
     if (data.higher_level) {
         data.higher_level.forEach(line => {
             let para2 = document.createElement('p');
             para2.innerText = line;
-            selectedList.appendChild(para2);
+            spellDesc.appendChild(para2);
         })
     }
 }
