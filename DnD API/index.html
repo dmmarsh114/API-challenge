@@ -9,21 +9,23 @@
 </head>
 <body>
     
-    <div class="main">        
-        <ul id="mainList"></ul>        
-    </div>
-        
-        <div class="card" id="spellCard" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" id="spellName">Spell Name</h5>
-                <h6 class="card-subtitle mb-2 text-muted" id="schoolTitle">School of Magic</h6>
-                <h6 class="card-subtitle mb-2 text-muted" id="charClassesTitle">Classes</h6>
-                <ul class="list-group list-group-flush" id="infoList"></ul>
-                <p class="card-text" id="spellDesc">The spell's description will go here.</p>
-            </div>
+    <div class="main">  
+
+        <div class="spellList">
+            <ul id="mainList"></ul>        
         </div>
         
+        <div class="card" id="spellCard">
+            <div class="card-body">
+                <h5 class="card-title" id="spellName">Spell Name</h5>
+                <h6 class="card-subtitle mb-2" id="schoolTitle">School of Magic</h6>
+                <h6 class="card-subtitle mb-2" id="charClassesTitle">Classes</h6>
+                <ul class="list-group list-group-flush" id="infoList"></ul>
+                <p class="card-text" id="spellDesc"><i>Spell Description</i></p>
+            </div>
+        </div>            
 
+    </div>
 
     <script src="dndAPI.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -9,12 +9,46 @@ body {
     justify-content: space-around;
 }
 
-#mainList {
+.spellList {
     background-color: thistle;
-    list-style-type: none;
-
+        
     width: 45%;
-
-    padding: 15px;
+    height: 400vh;
+    
     margin: 15px;
+}
+
+#mainList {
+    display: grid;
+    list-style-type: none;
+    padding: 15px;
+}
+
+.mainLi {
+    flex-flow: column wrap;
+}
+
+#spellCard {
+    width: 45%; 
+    height: 100%;
+
+    margin: 15px; 
+
+    background-image: url(./assets/annie-spratt-xvU-X0GV9-o-unsplash.jpg);
+}
+
+#infoList {
+    background: inherit;
+    color: inherit;
+}
+
+.list-group-item {
+    padding: 0;
+    font-size: smaller;
+    background: inherit;
+    font-weight: 500;
+}
+
+#spellDesc {
+    padding-top: 16px;
 }
