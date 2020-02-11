@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-.lists {
+.main {
     display: flex;
     flex-wrap: none;
     justify-content: space-around;
