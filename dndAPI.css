@@ -10,6 +10,7 @@ body {
 .header {
     text-align: center;
     margin: 15px;
+    margin-bottom: 0;
     font-size: larger;
 }
 
@@ -25,11 +26,10 @@ body {
     border-radius: 5px;
 
     overflow-y: scroll;
+    overflow-y: auto;
         
-    width: 45%;
+    width: 50%;
     height: 80vh;
-    
-    margin: 15px;
 }
 
 #mainList {
@@ -37,7 +37,7 @@ body {
     grid-template-columns: 25% 25% 25% 25%;
 
     list-style-type: none;
-    padding: 15px;
+    padding: 0px;
 }
 
 .mainLi {
@@ -57,13 +57,12 @@ body {
 }
 
 #spellCard {
-    width: 45%; 
     height: 80vh;
 
     overflow-y: scroll;
     overflow-y: auto;
     
-    margin: 15px; 
+    margin-left: 15px; 
 
     /* background: rgba(117, 115, 115, 0.575); */
     background: rgba(53, 51, 51, 0.726);
@@ -89,6 +88,11 @@ body {
     font-weight: 500;
 }
 
+#charClassesTitle {
+    font-size: smaller;
+}
+
 #spellDesc {
     padding-top: 16px;
+    font-size: smaller;
 }

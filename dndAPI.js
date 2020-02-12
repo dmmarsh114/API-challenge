@@ -42,7 +42,6 @@ function getMoreInfo(url) {
     fetch(baseURL + url)
     .then(response => response.json())
     .then(jsonData => {
-        console.log(jsonData);
         displayMoreInfo(jsonData);
     })    
 }
