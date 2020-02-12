@@ -27,6 +27,7 @@ function displaySpells(data) {
         mainList.appendChild(spell);
 
         let infoButton = document.createElement('button');
+        infoButton.classList.add('button');
         infoButton.innerText = item.name;
         spell.appendChild(infoButton);
 

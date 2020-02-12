@@ -1,8 +1,16 @@
 body {
-    background-color: beige;
+    background-image: url(./assets/annie-spratt-xvU-X0GV9-o-unsplash.jpg);
+
+    font-family: 'Open Sans', sans-serif;
 
     margin: 0;
     padding: 0;
+}
+
+.header {
+    text-align: center;
+    margin: 15px;
+    font-size: larger;
 }
 
 .main {
@@ -12,14 +20,14 @@ body {
 }
 
 .spellList {
-    background-image: url(./assets/annie-spratt-xvU-X0GV9-o-unsplash.jpg);
+    background: rgba(53, 51, 51, 0.726);
     border: thin solid darkgray;
     border-radius: 5px;
 
     overflow-y: scroll;
         
     width: 45%;
-    height: 90vh;
+    height: 80vh;
     
     margin: 15px;
 }
@@ -33,21 +41,40 @@ body {
 }
 
 .mainLi {
-    flex-flow: column wrap;
-    font-size: 10px;
-    margin: 0;
+    font-size: 12px;
+    margin: 3px;
+    text-align: center;
+}
+
+.button {
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+}
+
+.button:hover {
+    background: black;
 }
 
 #spellCard {
     width: 45%; 
-    height: 90vh;
+    height: 80vh;
 
     overflow-y: scroll;
     overflow-y: auto;
     
     margin: 15px; 
 
-    background-image: url(./assets/annie-spratt-xvU-X0GV9-o-unsplash.jpg);
+    /* background: rgba(117, 115, 115, 0.575); */
+    background: rgba(53, 51, 51, 0.726);
+
+    color: white;
+
+}
+
+#spellName {
+    font-family: 'Fondamento', cursive;
+    font-size: 30px;
 }
 
 #infoList {

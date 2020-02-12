@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeons&Dragons API</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fondamento|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" ref="text/css" href="dndAPI.css">
 </head>
 <body>
     
-    <div class="main">  
+    <div class="header">
+        <h1 style="font-family: 'Fondamento', cursive;">Dungeons&Dragons Spell List</h1>
+        <p>Select a spell on the left to learn more about it!</p>
+    </div>
 
-        <div class="spellList">
+    <div class="main container">  
+        <div class="spellList col-6">
             <ul id="mainList"></ul>        
         </div>
         
-        <div class="card" id="spellCard">
+        <div class="card col-6" id="spellCard">
             <div class="card-body">
                 <h5 class="card-title" id="spellName">Spell Name</h5>
                 <h6 class="card-subtitle mb-2" id="schoolTitle">School of Magic</h6>
@@ -24,7 +29,6 @@
                 <p class="card-text" id="spellDesc"><i>Spell Description</i></p>
             </div>
         </div>            
-
     </div>
 
     <script src="dndAPI.js"></script>
