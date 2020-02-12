@@ -29,7 +29,7 @@ body {
     overflow-y: auto;
         
     width: 50%;
-    height: 80vh;
+    height: 75vh;
 }
 
 #mainList {
@@ -57,7 +57,7 @@ body {
 }
 
 #spellCard {
-    height: 80vh;
+    height: 75vh;
 
     overflow-y: scroll;
     overflow-y: auto;
