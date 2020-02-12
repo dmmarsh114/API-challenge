@@ -1,4 +1,4 @@
-let baseURL = 'http://www.dnd5eapi.co'
+let baseURL = 'https://www.dnd5eapi.co'
 
 let mainList = document.getElementById('mainList');
 let selectedList = document.getElementById('selectedList');
